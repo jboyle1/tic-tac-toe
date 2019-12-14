@@ -9,8 +9,8 @@ function clearboard() {
     }
 }
 restart.addEventListener('click', clearboard);
-// Check the square marker Non efficient code
-var cellOne = document.querySelector('#one')
+// Check the square marker using non efficient code
+/*var cellOne = document.querySelector('#one')
 
 cellOne.addEventListener('click', function () {
     if (cellOne.textContent === '') {
@@ -20,5 +20,15 @@ cellOne.addEventListener('click', function () {
     } else {
         cellOne.textContent = '';
     }
-})
+})*/
+//Check the square marker
+function changeMarker() {
+    if (this.textContent === '') {
+        this.textContent = 'X'
+    } else if (this.textContent === 'X') {
+        this.textContent = 'O';
+    } else {
+        this.textContent = '';
+    }
+}
 // For loop to add event listeners to all the squares
