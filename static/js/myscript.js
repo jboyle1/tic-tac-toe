@@ -4,16 +4,21 @@ var restart = document.querySelector('#b');
 var squares = document.querySelectorAll('td')
 // Clear all the squares
 function clearboard() {
-    for (var i = 0; i < squares.length; i++ ) {
+    for (var i = 0; i < squares.length; i++) {
         squares[i].textContent = '';
     }
 }
-restart.addEventListener('click',clearboard);
-// Check the square marker
-// Non efficient code
+restart.addEventListener('click', clearboard);
+// Check the square marker Non efficient code
 var cellOne = document.querySelector('#one')
 
-cellOne.addEventListener('click',function(){
-    cellOne.textContent = 'X';
+cellOne.addEventListener('click', function () {
+    if (cellOne.textContent === '') {
+        cellOne.textContent = 'X'
+    } else if (cellOne.textContent === 'X') {
+        cellOne.textContent = 'O'
+    } else {
+        cellOne.textContent = '';
+    }
 })
 // For loop to add event listeners to all the squares
