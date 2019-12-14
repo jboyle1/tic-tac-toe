@@ -8,9 +8,12 @@ function clearboard() {
         squares[i].textContent = '';
     }
 }
-
-
 restart.addEventListener('click',clearboard);
 // Check the square marker
+// Non efficient code
+var cellOne = document.querySelector('#one')
 
+cellOne.addEventListener('click',function(){
+    cellOne.textContent = 'X';
+})
 // For loop to add event listeners to all the squares
